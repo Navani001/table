@@ -1,0 +1,104 @@
+
+body{
+    background-image: url("istockphoto-476098860-612x612 (1).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#homepage{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    width: 900px;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    margin-left: 300px;
+    border: 1px solid rgb(182, 182, 182);
+    
+}
+#left{
+    height: 600px;
+    width:290px;
+    background-color:darkcyan; 
+    border-radius: 10px;
+}
+#bird{
+    
+    height: 250px;
+    width: 250px;
+    
+}
+#project{
+    font-size: larger;
+    font-weight: bolder;
+    padding-bottom: 17px;
+}
+#para{
+    margin-left: 40px;
+}
+
+#left p{
+    margin-left: 20px;  
+    margin-top: 20px;
+    margin-bottom: 130px;
+}
+#bit{
+    height:100px;
+    width: 150px;
+    margin-left: 50px;
+}
+#right{
+    padding-left: 200px;
+    padding-top: 100px;
+}
+#bold{
+    top:0;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 35px;
+}
+#info{
+    font-size: 10px;
+    margin-left: 8px;
+}
+#input input{
+    width:230px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+#signin{
+    width: 240px;
+    background-color: rgb(0, 3, 190);
+    color: rgb(212, 208, 208);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+#signin:hover{
+    background-color: white;
+    color: black;
+}
+#signin:active{
+    background-color: red;
+    color: white;
+}
+hr{
+    border: 1px solid rgb(134, 134, 134);
+    margin-bottom: 35px;
+    width: 200px;
+}
+#submit{
+    background-color: blue;
+    color: white;
+    font-weight: bolder;
+    width:240px;
+    padding: 5px;
+    border-radius: 4px;
+    
+}
+#submit:active{
+    background-color: azure;
+    color: black;
+}
