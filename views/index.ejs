@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalized skill</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   
+   <div id="homepage">
+    <div id="left">
+       <p id="para"><span id="project">Project manager</span><br>it's not just about the numbers, but the story they tell and the decisions they empower!</p>
+       <img id="bird"src="auth.png" > 
+    </div>
+    <form method="post" action="/user">
+    <div id="right">
+        <img id="bit" src="logo.png" alt="">
+        <p id="bold">Sign In<br>
+        Get Access to your account</p>
+        <hr>
+        <p id="input"><span id="info">USER ID</span><br>
+               <input type="text" name="username" placeholder="enter your username">
+        </p>
+        <p id="input"><span id="info" >PASSWORD</span><br>
+        <input type="password" name="userpassword" placeholder="enter your password" maxlength="10">  </p>
+        <p id="wrong"><%= element %></p>
+        <input id="submit" type="submit" value="Sign In" >
+       
+    </form>
+    </div>
+</div>
+<script src="change.js"></script>
+
+</body>
+</html>
