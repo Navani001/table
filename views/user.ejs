@@ -1,94 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<html >
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="user.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8">
+    <style>
+      table, th, td { 
+            border: 1px solid black; 
+            border-collapse: collapse;
+            background-color: #e0c780; 
+        } 
+          
+        th, td { 
+            padding: 20px; 
+        } 
+          
+        th { 
+            text-align: left; 
+        } 
+    </style>
 </head>
+
 <body>
-    <div class="navbar">
-     <div><img src="logo1.png" alt=""></div>
-     <div id="tar"><span id="team">project manager</span></div>
-     <div id="input"><input type="text" placeholder="search"></div>
-    <div class="tin">
-      <i class="fa-solid fa-sun"></i>
-      <i id="moa"class="fa-solid fa-bars-progress"></i>
-      <i id="moa"class="fa-solid fa-user"></i>
-    </div>
-  </div>
-  <div class="left-sidebar">
-   <div id="era">
-    <div id="plo">project</div>
-    <div id="it">
-    <div><img id="note"src="notes.png" alt=""></div>
-    <div id="wer">worklog</div>
-  </div>
-   </div>
-    <div id="sura">
-      <div id="we"> <p>students Worklog</p></div>
-      <hr>
-      <div id="search" >
-        <input type="text" placeholder="search">
-      </div>
-      <div id="button">
-        <form method="post" action="/user">
-          <input value="Checkin" type="submit" id="checkin">
-      </form>
-      </div>
-      <div>
-        <table>
-          <tr>
-           
-            <th>User.ID</th>
-            <th>Name</th>
-            <th>checkin</th>
-            <th>checkout</th>
-            <th>action</th>
-          </tr>
-          <tr>
-            
-            <%  for (var key in element) { %>
-            <td><%= user.id %></td>
-            <td><%= user.name %></td>
-            <td><%=element[key] %></td>
-            <% } %>
-            <%  for (var key2 in element2) { %>
-             <td><%=element2[key2] %></td>
-            <td>
-              <form method="post">
-                <button type="submit" id="checkin">
-                  Checkout
-                </button></td>
-              </form>
-              <% } %>
-          </tr>
-          
-          
-        </table>
+    <section class="home">
+    <h1>DATA STORED IN THE TABLE</h1>
+    <ul class="list-group">
         
-      </div>
-    </div>
-  </div>
-  <script>
-		document.querySelector('button')
-			.addEventListener('click', (e) => {
-				e.preventDefault();
-				const username = "checkout";
-				fetch('/user', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						username
-					}),
-				})
-					.then((res) => {
-						return res.json();
-					})
-					.then((data) => console.log(data));
-			});
-	</script>
-</body>
+           <table>
+            <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              email
+            </th>
+            <th>
+           
+              password
+            </th>
+          </tr>
+            <% for(var i=0; i<contacts.length; i++) {%>
+              <tr>
+                <td>
+            <%= contacts[i].name %>
+              <td>
+              <%= contacts[i].email %>
+              </td>
+              <td>
+             <%= contacts[i].password %>
+              </td>
+            </tr>
+              <% } %>
+           </table>
+                
+     
+  </body>
+
 </html>
